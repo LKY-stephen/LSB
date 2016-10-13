@@ -1,0 +1,11 @@
+*.log
+*.tlog
+*.manifest
+*.pdb
+Debug/
+Release/
+*.vcxproj.user
+stbmp
+*project
+*.bmp
+/stbmp.VC.VC.opendb
