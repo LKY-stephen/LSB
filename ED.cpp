@@ -21,11 +21,11 @@ bool encrypt(string path, string message) {
 		cout << "File " << path << "cannot embed such long string" << endl;
 		return false;
 	}
-	unsigned char m,c;
+	unsigned char m;
 	uint32_t x = 0, y = 0,j=0;
 	RGB8 pixel;
 	unsigned char judge;
-	int i = 0;
+	uint32_t i = 0;
 	// Seting lesser bits of img to meaning bits of message
 	for (; i <messagesize; i++)
 	{

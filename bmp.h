@@ -1,7 +1,6 @@
 #pragma once
 
 #include "dataType.h"
-#include "bmpException.h"
 #include <string>
 using namespace std;
 class bmp

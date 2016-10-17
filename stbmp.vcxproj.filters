@@ -25,9 +25,6 @@
     <ClInclude Include="bmp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="bmpException.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="dataType.h">
       <Filter>头文件</Filter>
     </ClInclude>
