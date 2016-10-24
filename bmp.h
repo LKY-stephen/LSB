@@ -2,6 +2,13 @@
 
 #include "dataType.h"
 #include <string>
+
+
+#define SimpleLSB 1
+#define MultipleLSB1 2
+#define MultipleLSB2 3
+#define EncryptedLSB 4
+
 using namespace std;
 class bmp
 {

@@ -53,11 +53,6 @@ using namespace std;
 	memcpy(FileHeader.data, IMGtemp, FileHeader.offset);
     this -> allocImage ( );
 	memcpy(image, IMGtemp+ FileHeader.offset, FileHeader.size);
-
-	if (!file.good())
-	{
-		return FILEIN;
-	}
 	delete[]IMGtemp;
     file.close();
 	return FUNCSUCCEED;
