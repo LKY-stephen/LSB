@@ -19,8 +19,8 @@ int main(int argc, char* argv[]) {
 	if (ini == "--help" || ini == "-help" || ini == "-h") {
 		cout << "You can encrypt or decrypt some message" << endl;
 		cout << "Hint: you can use command line with args:" << endl;
-		cout << "stbmp -d [PATH [decrptyway,stopsymbol= ] ]\n"
-				"      -e [PATH MESSAGE [encrptyway,stopsymbol= ] ]" << endl;
+		cout << "stbmp -d [PATH [encrptyway [stopsymbol= ] ]\n"
+				"      -e [PATH MESSAGE [encrptyway [stopsymbol= ] ]" << endl;
 		return 0;
 	}
 	if (argc > 2) {
@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
 				cout<< decrypt(argv[2], stop_char,encryptway);
 			case 5:
 				encryptway = argv[3][0] - '0';
-				stop_char = argv[3][9];
+				stop_char = argv[4][0];
 				cout << decrypt(argv[2], stop_char, encryptway);
 				return 0;
 			default:
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
 				path = argv[2];
 				message = argv[3];
 				encryptway = argv[4][0] - '0';
-				stop_char = argv[5][9];
+				stop_char = argv[5][0];
 				break;
 			default:
 				cout << "Bad argument number " << argc << endl;
@@ -86,8 +86,8 @@ int main(int argc, char* argv[]) {
 
 	cout << "You can encrypt or decrypt some message" << endl;
 	cout << "Hint: you can use command line with args:" << endl;
-	cout << "stbmp -d [PATH [ stopsymbol= ] ]\n"
-			"      -e [PATH MESSAGE [ stopchar= ] ]\n"
+	cout << "stbmp -d [PATH [ encryptway [stopsymbol= ] ]\n"
+			"      -e [PATH MESSAGE [ encryptway [stopchar= ] ]\n"
 			"     [-h | --help | -help ]" << endl;
 
 	if (argc < 2) {
